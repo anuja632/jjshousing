@@ -696,7 +696,7 @@
 
     .floor-plan__main-tab-box .tab-buttons .tab-btn {
         display: block;
-        max-width: 175px;
+        /* max-width: 175px; */
         width: 100%;
     }
 
@@ -1208,11 +1208,18 @@
         padding: 286px 0 183px;
     }
 
-
-
-
+.brand-one__wrap {
+    position: relative;
+    display: block;
+    padding: 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+.testimonial-one__single-inner{
+    padding: 10px;
 }
 
+}
 
 
 

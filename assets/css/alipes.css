@@ -2670,6 +2670,7 @@ ul {
   font-weight: 500;
   line-height: 30px !important;
   font-family: var(--alipes-font-two) !important;
+  margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -2936,7 +2937,7 @@ ul {
 .brand-one__wrap {
   position: relative;
   display: block;
-  padding: 80px 0 80px;
+  padding:30px 0 30px;
   overflow: hidden;
   z-index: 1;
 }
@@ -2947,6 +2948,7 @@ ul {
   left: 0;
   z-index: -1;
 }
+
 
 .brand-one__shape-1 img {
   width: auto;
@@ -2966,28 +2968,66 @@ ul {
 .brand-one__inner {
   position: relative;
   display: block;
+}.brand-one__marquee {
+    overflow: hidden;
+    width: 100%;
+    background: var(--alipes-white);
+    padding: 30px 0;
 }
 
-.brand-one__inner .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.tp-text-sliding {
+  overflow: hidden;
+}
+.tp-text-scroll-hr {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.tp-text-scroll-wrap {
+  display: flex;
+  -webkit-animation: scrollText 33s infinite linear;
+  animation: scrollText 33s infinite linear;
+}
+.tp-text-title {
+  font-size: 120px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 35, 90, 0.3);
 }
 
-.brand-one__inner .swiper-slide img {
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  opacity: .25;
+.tp-progress-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 35, 90);
+  z-index: -1;
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+  .tp-progress-shape {
+    display: none;
+  }
 }
 
-.brand-one__inner .swiper-slide img:hover {
-  opacity: 1;
+/* Continuous scroll keyframes */
+@keyframes scrollText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsive sizes */
+@media (max-width: 991px) {
+    .tp-text-title {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tp-text-title {
+        font-size: 40px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -3290,8 +3330,10 @@ ul {
 .floor-plan__tab-content-details li {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* stack p and span vertically */
+  align-items: flex-start;
+  justify-content: center;
+
   max-width: 395px;
   width: 100%;
   background-color: var(--alipes-primary);
@@ -3313,7 +3355,7 @@ ul {
 .floor-plan__tab-content-details li p {
   font-size: 18px;
   font-weight: 500;
-  color: var(--alipes-gray);
+  color: black;
   text-transform: uppercase;
   font-family: var(--alipes-font-two);
   letter-spacing: var(--alipes-letter-spacing);
@@ -3321,15 +3363,15 @@ ul {
 
 .floor-plan__tab-content-details li span {
   font-size: 18px;
-  font-weight: 500;
-  color: var(--alipes-black);
-  text-transform: uppercase;
+  /* font-weight: 500; */
+  color: gray;
+  /* text-transform: uppercase; */
   font-family: var(--alipes-font-two);
   letter-spacing: var(--alipes-letter-spacing);
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 80px;
+  /* max-width: 80px; */
   width: 100%;
 }
 
@@ -3342,7 +3384,8 @@ ul {
 }
 
 .floor-plan__tab-content-righ img {
-  width: auto;
+  max-width: 100%;
+  max-height: 400px;
 }
 
 
@@ -3409,6 +3452,8 @@ ul {
 
 .gallery-one__img img {
   width: 100%;
+  height: 330px;
+  
 }
 
 .gallery-one__content {
@@ -3634,7 +3679,9 @@ ul {
 }
 
 .testimonial-one__img-2 img {
-  width: auto !important;
+  width: 100px !important;
+
+height:100px;
   border-radius: 50%;
 }
 
@@ -3713,8 +3760,10 @@ ul {
 }
 
 .testimonial-one__img img {
-  width: auto;
+  width: 100px !important;
+  height: 100px !important;
   border-radius: 50%;
+
 }
 
 .testimonial-one__client-info {
@@ -3907,6 +3956,7 @@ ul {
 
 .news-one__img img {
   width: 100%;
+  height: 300px;
   transition: .5s ease;
   transform: scale(1.05);
 }
@@ -3945,7 +3995,7 @@ ul {
 
 .news-one__content {
   position: relative;
-  margin-top: -70px;
+  margin-top: -30px;
   margin-left: 20px;
   margin-right: 20px;
   background-color: rgb(255, 255, 255);
@@ -4276,7 +4326,7 @@ ul {
   margin-bottom: 20px;
 }
 
-.contact-one__input-box input[type="text"],
+.contact-one__input-box input[type="text"],.contact-one__input-box input[type="tel"],
 .contact-one__input-box input[type="email"] {
   height: 52px;
   width: 100%;
