@@ -3344,7 +3344,9 @@ ul {
   background-color: var(--alipes-primary);
   padding: 14px 40px 10px;
 }
-
+#logo{
+height:100px;
+}
 /* .floor-plan__tab-content-details li:nth-child(2) {
   background-color: #009934;
 }
