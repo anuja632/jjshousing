@@ -440,7 +440,7 @@ ul {
 # Navigations One
 --------------------------------------------------------------*/
 .main-header {
-  background: transparent;
+  background: white;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -456,7 +456,8 @@ ul {
   right: 0;
   content: "";
   height: 1px;
-  background-color: rgba(var(--alipes-white-rgb), .05);
+  background-color: rgba(var(--alipes-white-rgb));
+  color:black;
 }
 
 .main-header__top {
@@ -532,7 +533,9 @@ ul {
   position: relative;
   display: block;
 }
-
+.main-menu .main-menu__list li a{
+  color:black !important;
+}
 .main-header__contact-list {
   position: relative;
   display: flex;
@@ -590,6 +593,7 @@ ul {
   position: relative;
   display: block;
   padding: 0 60px;
+  color: var(--alipes-white);
 }
 
 .main-menu__wrapper-inner {
@@ -695,13 +699,13 @@ ul {
 }
 
 .main-menu__btn {
-  background-color: var(--alipes-white);
-  color: var(--alipes-black);
+  background-color: var(--alipes-black);
+  color: var(--alipes-white);
 }
 
 
 .stricky-header.main-menu {
-  background-color: var(--alipes-black);
+  background-color: var(--alipes-white);
 }
 
 .main-menu .main-menu__list,
@@ -740,6 +744,7 @@ ul {
   padding-top: 38px;
   padding-bottom: 32px;
   position: relative;
+
 }
 
 .main-menu .main-menu__list>li+li,
