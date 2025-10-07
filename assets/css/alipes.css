@@ -56,7 +56,7 @@ body.locked {
 }
 
 a {
-  color: var(--alipes-gray);
+    color: #cccbc9;
 }
 
 a,
@@ -395,8 +395,8 @@ ul {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60px auto;
-  width: 30vw;   /* 30% of viewport width */
-  height: 30vw;  /* keeps square container */
+  width: 10vw;   /* 30% of viewport width */
+  height: 10vw;  /* keeps square container */
   background-size: 100% auto; /* fills container width */
 }
 
@@ -3355,7 +3355,7 @@ ul {
   padding: 14px 40px 10px;
 }
 #logo{
-height:80px;
+height:60px;
 }
 /* .floor-plan__tab-content-details li:nth-child(2) {
   background-color: #009934;
@@ -4495,12 +4495,12 @@ height:100px;
   margin-top: 3px;
 }
 
-.footer-widget__explore-list li a {
+.footer-widget__explore-list li a,.footer-widget__projects-list.list-styled li a {
   position: relative;
   display: inline-block;
   font-size: 15px;
   font-weight: 400;
-  color: #7a736a;
+    color: #cbc7c2;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   z-index: 1;
@@ -4540,7 +4540,7 @@ height:100px;
   font-size: 15px;
   font-weight: 500;
   line-height: 30px;
-  color: #7a736a;
+    color: #cbc7c2;
   padding-top: 1px;
 }
 
@@ -4563,6 +4563,7 @@ height:100px;
   top: 1px;
 }
 
+
 .footer-widget__contact-list li .icon span {
   position: relative;
   display: inline-block;
@@ -4582,7 +4583,7 @@ height:100px;
 }
 
 .footer-widget__contact-list li .text p a {
-  color: var(--alipes-white);
+  /* color: var(--alipes-white); */
   transition: all 500ms ease;
 }
 
@@ -10372,7 +10373,7 @@ height:100px;
 }
 
 .apartment-three__buttons .btn-primary {
-  background-color: #0056b3;
+  background-color: #009934;
   border: none;
 }
 
@@ -10381,7 +10382,7 @@ height:100px;
 }
 
 .apartment-three__buttons .btn-outline-primary {
-  border: 2px solid #0056b3;
+  border: 2px solid #009934;
   color: #0056b3;
   background: transparent;
 }
@@ -10390,6 +10391,10 @@ height:100px;
   background-color: #0056b3;
   color: #fff;
 }
+
+
+
+
 
 /*--------------------------------------------------------------
 # Product
@@ -12137,4 +12142,93 @@ body.boxed-wrapper {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Fixed Right Side Vertical Bar */
+.fixed-contact-icons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Icon Buttons */
+.fixed-contact-icons .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 5px 0;
+    background-color: #25D366; /* WhatsApp green as default, can adjust per icon */
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.fixed-contact-icons .icon-btn.phone { background-color: #007bff; } /* Blue for phone */
+.fixed-contact-icons .icon-btn.email { background-color: #ff5722; } /* Orange for email */
+
+.fixed-contact-icons .icon-btn:hover {
+    transform: scale(1.1);
+}
+
+
+.fixed-contact-icons {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.fixed-contact-icons .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.fixed-contact-icons .icon-btn.whatsapp { background-color: #25D366; }
+.fixed-contact-icons .icon-btn.phone { background-color: #007bff; }
+.fixed-contact-icons .icon-btn.email { background-color: #ff5722; }
+
+.fixed-contact-icons .icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.fixed-contact-icons .enquiry-btn {
+    display: block;
+    padding: 10px 0;
+    background-color: #009934;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+
+    /* Make text vertical */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    transition: background-color 0.3s ease;
+}
+
+.fixed-contact-icons .enquiry-btn:hover {
+    background-color: #003f8c
 }
