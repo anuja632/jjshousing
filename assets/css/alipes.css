@@ -391,7 +391,7 @@ ul {
   animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  background-image: url(../images/resources/jjslogo1.jpg);
+  background-image: url(../images/resources/JJS.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60px auto;
@@ -699,7 +699,7 @@ ul {
 }
 
 .main-menu__btn {
-  background-color:black !important;
+  background-color:#009934 !important;
   color:white !important;
 }
 
@@ -2429,6 +2429,7 @@ ul {
 
 .about-one__img-two img {
   width: auto;
+
 }
 
 .about-one__left {
@@ -2593,6 +2594,8 @@ ul {
 
 .about-one__shape-2 img {
   width: auto;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(2600%) hue-rotate(190deg) brightness(95%) contrast(95%);
+
 }
 
 /*--------------------------------------------------------------
@@ -2713,6 +2716,8 @@ ul {
 
 .why-choose-one__shape-2 img {
   width: auto;
+    filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(2600%) hue-rotate(190deg) brightness(95%) contrast(95%);
+
 }
 
 .why-choose-one__left {
@@ -3113,7 +3118,7 @@ ul {
     width: 100%;
     /* max-width: 370px; */
     height: auto;
-    height: 400px !important;
+    height: 300px !important;
     /* object-fit: cover; */
 }
 
@@ -3173,10 +3178,12 @@ ul {
   justify-content: center;
   width: 42px;
   height: 42px;
-  border: 2px solid var(--alipes-base);
+  border: 2px solid #009934;
   border-radius: 50%;
   font-size: 16px;
-  color: var(--alipes-base);
+    background-color:white;
+
+  color:var(--alipes-base);;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -3184,6 +3191,8 @@ ul {
 .apartment-one__arrow a:hover {
   border: 2px solid var(--alipes-white);
   color: var(--alipes-white);
+      background-color:#009934;
+
 }
 
 .apartment-one__btn-box {
@@ -3341,11 +3350,12 @@ ul {
 
   max-width: 395px;
   width: 100%;
-  background-color: var(--alipes-primary);
+  border:1px solid #009934;
+  /* background-color: var(--alipes-primary); */
   padding: 14px 40px 10px;
 }
 #logo{
-height:100px;
+height:80px;
 }
 /* .floor-plan__tab-content-details li:nth-child(2) {
   background-color: #009934;
@@ -3374,7 +3384,7 @@ height:100px;
 .floor-plan__tab-content-details li span {
   font-size: 18px;
   /* font-weight: 500; */
-  color: #000;
+  color: gray;
   /* text-transform: uppercase; */
   font-family: var(--alipes-font-two);
   letter-spacing: var(--alipes-letter-spacing);
@@ -5033,7 +5043,7 @@ height:100px;
 .services-one__single-inner {
   position: relative;
   display: block;
-  padding: 49px 50px 45px;
+  padding: 20px;
   overflow: hidden;
   transition-delay: .1s;
   transition-timing-function: ease-in-out;
@@ -5084,7 +5094,7 @@ height:100px;
   position: absolute;
   width: 47px;
   height: 47px;
-  background-color: var(--alipes-primary);
+  /* background-color: var(--alipes-primary); */
   border-radius: 50%;
   top: 15px;
   right: -19px;
@@ -6621,6 +6631,8 @@ height:100px;
   display: inline-block;
   margin-top: 6px;
   z-index: 1;
+  color:var(--alipes-base);
+  font-size: 30px;
 }
 
 .new-concept__points li .icon::before {
@@ -6630,7 +6642,7 @@ height:100px;
   right: -10px;
   width: 49px;
   height: 49px;
-  background-color: var(--alipes-primary);
+  /* background-color: var(--alipes-); */
   border-radius: 50%;
   z-index: -1;
 }
@@ -8843,7 +8855,7 @@ height:100px;
 }
 
 .services-three__title {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 20px;
@@ -10178,7 +10190,7 @@ height:100px;
 .contact-page {
   position: relative;
   display: block;
-  padding: 120px 0 120px;
+  padding: 120px 0 20px;
 }
 
 .contact-page .container {
@@ -10343,6 +10355,40 @@ height:100px;
   height: 475px;
   width: 100%;
   mix-blend-mode: luminosity;
+}
+
+.apartment-three__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.apartment-three__buttons .btn {
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.apartment-three__buttons .btn-primary {
+  background-color: #0056b3;
+  border: none;
+}
+
+.apartment-three__buttons .btn-primary:hover {
+  background-color: #003f8c;
+}
+
+.apartment-three__buttons .btn-outline-primary {
+  border: 2px solid #0056b3;
+  color: #0056b3;
+  background: transparent;
+}
+
+.apartment-three__buttons .btn-outline-primary:hover {
+  background-color: #0056b3;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
