@@ -23,6 +23,19 @@
 
   }
 
+// Select all anchor links with hashes
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // prevent default jump/reload
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            // Smooth scroll to the target section
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+
 
 
   function thmOwlInit() {

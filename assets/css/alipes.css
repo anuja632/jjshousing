@@ -47,6 +47,7 @@ body {
   font-family: var(--alipes-font);
   color: var(--alipes-gray);
   font-size: 16px;
+  overflow-x: hidden;
   line-height: 30px;
   font-weight: 500;
 }
@@ -3355,8 +3356,12 @@ ul {
   padding: 14px 40px 10px;
 }
 #logo{
-height:60px;
+height:95px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 /* .floor-plan__tab-content-details li:nth-child(2) {
   background-color: #009934;
 }
