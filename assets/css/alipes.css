@@ -19,7 +19,7 @@
 --------------------------------------------------------------*/
 :root {
   --alipes-font: 'Manrope', sans-serif;
-  --alipes-font-two: 'Teko', sans-serif;
+  --alipes-font-two: 'Roboto', sans-serif; /* changed to a new font */
   --alipes-reey-font: "reeyregular";
   --alipes-gray: #827e78;
   --alipes-gray-rgb: 130, 126, 120;
@@ -96,7 +96,7 @@ h6 {
   font-family: var(--alipes-font-two);
   color: var(--alipes-black);
   margin: 0;
-  letter-spacing: var(--alipes-letter-spacing);
+  /* letter-spacing: var(--alipes-letter-spacing); */
 }
 
 p {
@@ -250,6 +250,8 @@ ul {
   text-transform: uppercase;
   padding: 13px 59px 9px;
   transition: all 0.5s linear;
+    border-radius: 7px;
+
   z-index: 1;
 }
 
@@ -527,7 +529,7 @@ ul {
 
 .main-header__top-time {
   font-size: 13px;
-  color: #7a736a;
+  color: #fff;
 }
 
 .main-header__top-right {
@@ -572,11 +574,11 @@ ul {
 .main-header__contact-list li .text p {
   font-size: 13px;
   font-weight: 500;
-  color: #7a736a;
+   color: #fff;
 }
 
 .main-header__contact-list li .text p a {
-  color: #7a736a;
+  color: #fff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -630,48 +632,6 @@ ul {
   display: block;
 }
 
-.main-menu__search-cart-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 24px 0;
-}
-
-.main-menu__search-cart-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 14px 0;
-}
-
-.main-menu__search-cart-box:before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  bottom: 7px;
-  left: -30px;
-  width: 1px;
-  background-color: rgba(var(--alipes-white-rgb), .10);
-}
-
-.main-menu__search-box {
-  position: relative;
-  display: block;
-}
-
-.main-menu__search {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  color: var(--alipes-white);
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-
-.main-menu__search:hover {
-  color: var(--alipes-base);
-}
 
 .main-menu__cart-box {
   position: relative;
@@ -755,7 +715,8 @@ ul {
 
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,7 +729,7 @@ ul {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 300;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   font-family: var(--alipes-font-two);
 }
 
@@ -880,7 +841,7 @@ ul {
 .stricky-header .main-menu__list>li>ul>li>a,
 .stricky-header .main-menu__list>li>ul>li>ul>li>a {
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 30px;
   color: var(--alipes-gray);
   font-weight: 500;
@@ -1763,6 +1724,8 @@ ul {
   border: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+   
+
 }
 
 .search-popup__content .thm-btn i {
@@ -2620,21 +2583,48 @@ ul {
   background-size: cover;
   z-index: -1;
 }
-
 .counter-one__single {
   position: relative;
   display: block;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 10px 60px rgba(0,0,0,0.1);
   padding: 36px 38px 26px 0;
   margin-bottom: 30px;
+  overflow: hidden;
+  z-index: 1;
+  color:white;
+
+}
+
+/* Overlay */
+.counter-one__single::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+  z-index: 0; /* behind the content */
+  pointer-events: none; /* let clicks pass through */
+}
+
+/* Ensure content is above overlay */
+.counter-one__single .counter-one__top,
+.counter-one__single .counter-one__count-box,
+.counter-one__single .counter-one__icon {
+  position: relative;
+  z-index: 1;
 }
 
 .counter-one__top {
   position: relative;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  justify-content: space-between;
+      text-align: center;
+color:white;
+  /* justify-content: space-between; */
 }
 
 .counter-one__shape {
@@ -2650,6 +2640,7 @@ ul {
   position: relative;
   display: inline-block;
   top: 2px;
+  display: none;
 }
 
 .counter-one__icon span {
@@ -2662,6 +2653,19 @@ ul {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
+/* Style for the + sign next to odometer number */
+.counter-one__count-box span {
+    display: inline-block;
+    font-size: 28px;        /* match or adjust relative to odometer */
+    font-weight: bold;      
+color:white;
+    vertical-align: top;    /* aligns with top of number */
+}
+
+.counter-one__count-box span i {
+    font-style: normal;     /* remove italic from <i> */
+}
+
 
 .counter-one__single:hover .counter-one__icon span {
   transform: scale(.9);
@@ -3006,6 +3010,10 @@ ul {
   color: transparent;
   -webkit-text-stroke: 1px rgba(0, 35, 90, 0.3);
 }
+.tp-text-title:hover {
+  /* -webkit-text-stroke-color: ; darker stroke on hover */
+  color: var(--alipes-base);/* optional: fill color appears on hover */
+}
 
 .tp-progress-color {
   position: absolute;
@@ -3244,6 +3252,8 @@ ul {
 .floor-plan__main-tab-box .tab-buttons .tab-btn {
   position: relative;
   display: inline-block;
+    border-radius: 7px;
+
 }
 
 .floor-plan__main-tab-box .tab-buttons .tab-btn+.tab-btn {
@@ -3268,10 +3278,14 @@ ul {
   font-family: var(--alipes-font-two);
   transition: all 0.3s ease;
   z-index: 1;
+    border-radius: 7px;
+
 }
 
 .floor-plan__main-tab-box .tab-buttons .tab-btn.active-btn span {
   color: var(--alipes-white);
+    border-radius: 7px;
+
 }
 
 .floor-plan__main-tab-box .tab-buttons .tab-btn span:before {
@@ -3285,7 +3299,10 @@ ul {
   background-color:#009934;
   transition: all 0.3s ease;
   z-index: -1;
+    border-radius: 7px;
+
 }
+
 
 .floor-plan__main-tab-box .tab-buttons .tab-btn.active-btn span:before {
   height: 100%;
@@ -3356,7 +3373,7 @@ ul {
   padding: 14px 40px 10px;
 }
 #logo{
-height:95px;
+height:100px;
 }
 html {
   scroll-behavior: smooth;
@@ -9091,6 +9108,8 @@ height:100px;
   margin-bottom: 30px;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+    overflow: hidden; /* important for overlay */
+
 }
 
 .amenities__single:hover {
@@ -9108,10 +9127,31 @@ height:100px;
   background-color: #ebe8e4;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+    z-index: 1;
+
 }
 
 .amenities__single:hover:before {
   background-color: var(--alipes-base);
+}
+
+/* New hover background */
+.amenities__single::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.hunterproperty.in/assets/img/video/01.jpg') center/cover no-repeat;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.amenities__single:hover::after {
+  opacity: 1;
+
 }
 
 .amenities__icon {
@@ -9148,9 +9188,9 @@ height:100px;
   transform: scale(1);
 }
 
-.amenities__single:hover .amenities__icon span {
+/* .amenities__single:hover .amenities__icon span {
   transform: scale(0.9);
-}
+} */
 
 .amenities__title {
   font-size: 24px;
@@ -9166,24 +9206,20 @@ height:100px;
   transition: all 500ms ease;
 }
 
-.amenities__title a:hover {
+/* .amenities__title a:hover {
   color: var(--alipes-base);
-}
+} */
 
 .amenities__text {
   padding-bottom: 31px;
+  color:#000000;
+}
+/* Make icon disappear on hover */
+.amenities__single:hover .amenities__icon {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.amenities__btn {
-  font-size: 14px;
-  color: var(--alipes-gray);
-  background-color: var(--alipes-primary);
-  padding: 9px 59px 5px;
-}
-
-.amenities__btn:before {
-  background-color: var(--alipes-black);
-}
 
 /*--------------------------------------------------------------
 # Feature One

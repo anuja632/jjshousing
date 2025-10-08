@@ -35,7 +35,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.counter-one__count-box .odometer').forEach(function(el) {
+        var count = el.getAttribute('data-count');
 
+        // Animate number
+        el.innerHTML = 0;
+        setTimeout(function() {
+            el.innerHTML = count;
+        }, 100);
+
+        // Add "+" after animation
+        setTimeout(function() {
+            el.innerHTML = count + '+';
+        }, 2100); // matches odometer duration (~2s)
+    });
+});
 
 
   function thmOwlInit() {
