@@ -4175,6 +4175,7 @@ height:100px;
   display: block;
 }
 
+
 .contact-one__left {
   position: relative;
   display: block;
@@ -5148,7 +5149,7 @@ height:100px;
 }
 
 .services-one__title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -9143,19 +9144,7 @@ height:100px;
   background-color: var(--alipes-base);
 }
 
-/* New hover background */
-.amenities__single::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://www.hunterproperty.in/assets/img/video/01.jpg') center/cover no-repeat;
-  opacity: 0;
-  transition: all 0.5s ease;
-  z-index: 0;
-}
+
 
 .amenities__single:hover::after {
   opacity: 1;
@@ -9222,11 +9211,7 @@ height:100px;
   padding-bottom: 31px;
   color:#000000;
 }
-/* Make icon disappear on hover */
-.amenities__single:hover .amenities__icon {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
+
 
 
 /*--------------------------------------------------------------
@@ -10237,19 +10222,22 @@ height:100px;
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
+
 .contact-page {
   position: relative;
   display: block;
   padding: 120px 0 20px;
 }
 
-.contact-page .container {
-  max-width: 770px;
-}
 
 .contact-page__inner {
   position: relative;
   display: block;
+}
+.contact-image {
+    width: 100%;
+    height: 477px;
+    object-fit: cover;
 }
 
 .contact-page__form .row {
@@ -10266,7 +10254,7 @@ height:100px;
 .contact-page__input-box input[type="text"],.contact-page__input-box input[type="tel"],
 .contact-page__input-box input[type="email"] {
   height: 52px;
-  width: 100%;
+  width: 80%;
   border: none;
   background-color: var(--alipes-primary);
   padding-left: 30px;
