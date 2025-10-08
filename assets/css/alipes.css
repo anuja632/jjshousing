@@ -1893,6 +1893,14 @@ ul {
   line-height: 0;
 }
 
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height:auto;
+    position: relative;
+    transition-property: transform
+}
+
 
 .main-slider__nav .swiper-button-next,
 .main-slider__nav .swiper-button-prev {
