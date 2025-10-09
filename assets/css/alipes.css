@@ -68,6 +68,7 @@ a:hover,
 a:focus,
 a:visited {
   text-decoration: none;
+  color: white;
 }
 
 ::-webkit-input-placeholder {
@@ -587,9 +588,7 @@ ul {
   transition: all 500ms ease;
 }
 
-.main-header__contact-list li .text p a:hover {
-  color: var(--alipes-base);
-}
+
 
 .main-menu {
   position: relative;
@@ -861,13 +860,13 @@ ul {
   text-transform: uppercase;
 }
 
-.main-menu .main-menu__list>li>ul>li:hover>a,
+/* .main-menu .main-menu__list>li>ul>li:hover>a,
 .main-menu .main-menu__list>li>ul>li>ul>li:hover>a,
 .stricky-header .main-menu__list>li>ul>li:hover>a,
 .stricky-header .main-menu__list>li>ul>li>ul>li:hover>a {
   background-color: var(--alipes-primary);
   color: var(--alipes-black);
-}
+} */
 
 .main-menu .main-menu__list>li>ul>li>a::before,
 .main-menu .main-menu__list>li>ul>li>ul>li>a::before,
@@ -1260,9 +1259,7 @@ ul {
   margin-left: 30px;
 }
 
-.mobile-nav__social a:hover {
-  color: var(--alipes-base);
-}
+
 
 .mobile-nav__contact {
   margin-bottom: 0;
@@ -4622,9 +4619,6 @@ height:100px;
   transition: all 500ms ease;
 }
 
-.footer-widget__contact-list li .text p a:hover {
-  color: var(--alipes-base);
-}
 
 .footer-widget__newsletter {
   position: relative;
@@ -10255,9 +10249,9 @@ height:100px;
 }
 
 .contact-page__input-box input[type="text"],.contact-page__input-box input[type="tel"],
-.contact-page__input-box input[type="email"] {
+.contact-page__input-box input[type="email"], .contact-page__input-box select  {
   height: 52px;
-  width: 80%;
+  width: 100%;
   border: none;
   background-color: var(--alipes-primary);
   padding-left: 30px;
