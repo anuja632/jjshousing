@@ -36,12 +36,11 @@
 }
 
 .row {
-  --bs-gutter-x: 30px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
-.gutter-y-30 {
-  --bs-gutter-y: 30px;
-}
+
 
 body {
   font-family: var(--alipes-font);
