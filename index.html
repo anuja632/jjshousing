@@ -802,7 +802,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -818,7 +818,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -834,7 +834,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -850,7 +850,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -866,7 +866,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -882,7 +882,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -898,7 +898,7 @@
                                 </div>
                                 <div class="gallery-one__content">
                                     <p class="gallery-one__sub-title">Apartment</p>
-                                    <h3 class="gallery-one__title"><a href="apartment-details-1.html">Luxury
+                                    <h3 class="gallery-one__title"><a href="completed.html">Luxury
                                             apartment</a></h3>
                                 </div>
                             </div>
@@ -1294,36 +1294,48 @@
                                     <span class="section-title__tagline">contact with me</span>
                                     <h2 class="section-title__title">write to agent</h2>
                                 </div>
-                              <form action="https://formsubmit.co/abianu632@gmail.com" method="POST" class="contact-one__form contact-one-validated" >
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="contact-one__input-box">
-                <input type="text" placeholder="Your Name" name="name" required>
-            </div>
-        </div>
-        <div class="col-xl-12">
-            <div class="contact-one__input-box">
-                <input type="email" placeholder="Email Address" name="email" required>
-            </div>
-        </div>
-        <div class="col-xl-12">
-            <div class="contact-one__input-box">
-                <input type="tel" placeholder="Phone Number" name="phone" required>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="contact-one__input-box text-message-box">
-                <textarea name="message" placeholder="Write a Message" required></textarea>
-            </div>
-            <button type="submit" class="thm-btn contact-one__btn">Send a message</button>
-        </div>
-    </div>
+<form class="contactForm" 
+      action="https://formsubmit.co/abianu632@gmail.com" 
+      method="POST">
 
-    <!-- Optional hidden fields for FormSubmit -->
-    <input type="hidden" name="_captcha" value="false"> <!-- disables captcha -->
-    <input type="hidden" name="_next" value="thank-you.html"> <!-- redirect after submit -->
+  <!-- Hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Inquiry from Website">
+  <input type="hidden" name="_next" value="thankyou.html">
+
+  <div class="row">
+    <div class="col-xl-6">
+      <div class="contact-page__input-box">
+        <input type="text" placeholder="Your Name" name="name" required>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="contact-page__input-box">
+        <input type="email" placeholder="Email Address" name="email" required>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="contact-page__input-box">
+        <input type="tel" placeholder="Phone Number" name="phone" required>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="contact-page__input-box">
+        <input type="text" placeholder="Subject" name="subject" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="contact-page__input-box text-message-box">
+        <textarea name="message" placeholder="Write Message" required></textarea>
+      </div>
+      <div class="contact-page__btn-box">
+        <button type="submit" class="thm-btn contact-page__btn">Send a message</button>
+      </div>
+    </div>
+  </div>
 </form>
 
                             </div>
@@ -1552,6 +1564,41 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
+
+<script>
+document.querySelector('.contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent normal reload
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  // ✅ Correct AJAX endpoint for FormSubmit
+  fetch("https://formsubmit.co/ajax/abianu632@gmail.com", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      form.reset();
+      // Redirect to thank you page
+      window.location.href = "thankyou.html";
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  })
+  .catch(() => {
+    alert("Error submitting the form. Please check your connection.");
+  })
+  .finally(() => {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send a message";
+  });
+});
+</script>
 
 
     <!-- template js -->

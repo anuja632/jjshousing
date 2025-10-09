@@ -35,22 +35,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.counter-one__count-box .odometer').forEach(function(el) {
-        var count = el.getAttribute('data-count');
-
-        // Animate number
-        el.innerHTML = 0;
-        setTimeout(function() {
-            el.innerHTML = count;
-        }, 100);
-
-        // Add "+" after animation
-        setTimeout(function() {
-            el.innerHTML = count + '+';
-        }, 2100); // matches odometer duration (~2s)
-    });
-});
 
 
   function thmOwlInit() {
@@ -84,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
 
+  
 
   // Price Filter
   function priceFilter() {
@@ -347,77 +332,6 @@ document.addEventListener("DOMContentLoaded", function() {
       );
 
       return false;
-    });
-  }
-
-
-  if ($(".contact-form-validated").length) {
-    $(".contact-form-validated").validate({
-      // initialize the plugin
-      rules: {
-        name: {
-          required: true
-        },
-        email: {
-          required: true,
-          email: true
-        },
-        message: {
-          required: true
-        },
-        subject: {
-          required: true
-        }
-      },
-      submitHandler: function (form) {
-        // sending value with ajax request
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).parent().find(".result").append(response);
-            $(form).find('input[type="text"]').val("");
-            $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
-          }
-        );
-        return false;
-      }
-    });
-  }
-
-  // mailchimp form
-  if ($(".mc-form").length) {
-    $(".mc-form").each(function () {
-      var Self = $(this);
-      var mcURL = Self.data("url");
-      var mcResp = Self.parent().find(".mc-form__response");
-
-      Self.ajaxChimp({
-        url: mcURL,
-        callback: function (resp) {
-          // appending response
-          mcResp.append(function () {
-            return '<p class="mc-message">' + resp.msg + "</p>";
-          });
-          // making things based on response
-          if (resp.result === "success") {
-            // Do stuff
-            Self.removeClass("errored").addClass("successed");
-            mcResp.removeClass("errored").addClass("successed");
-            Self.find("input").val("");
-
-            mcResp.find("p").fadeOut(10000);
-          }
-          if (resp.result === "error") {
-            Self.removeClass("successed").addClass("errored");
-            mcResp.removeClass("successed").addClass("errored");
-            Self.find("input").val("");
-
-            mcResp.find("p").fadeOut(10000);
-          }
-        }
-      });
     });
   }
 

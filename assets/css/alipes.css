@@ -50,7 +50,10 @@ body {
   overflow-x: hidden;
   line-height: 30px;
   font-weight: 500;
+
+
 }
+
 
 body.locked {
   overflow: hidden;
@@ -101,6 +104,7 @@ h6 {
 
 p {
   margin: 0;
+  color:black;
 }
 
 dl,
@@ -715,7 +719,7 @@ ul {
 
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -874,7 +878,7 @@ ul {
   right: 20px;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f105";
+  /* content: "\f105"; */
   font-size: 14px;
   color: var(--alipes-base);
   transform: translateY(-50%) scale(0);
@@ -4252,7 +4256,7 @@ height:100px;
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 58px;
+  margin-top: 20px;
 }
 
 .contact-one__points li {
@@ -5149,7 +5153,7 @@ height:100px;
 }
 
 .services-one__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
@@ -8887,7 +8891,7 @@ height:100px;
 }
 
 .services-three__title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 20px;
