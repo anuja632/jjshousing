@@ -104,7 +104,7 @@ h6 {
 
 p {
   margin: 0;
-  color:black;
+  /* color:black; */
 }
 
 dl,
@@ -2734,7 +2734,7 @@ color:white;
 .why-choose-one__shape-2 img {
   width: auto;
     filter: brightness(0) saturate(100%) invert(32%) sepia(98%) saturate(2600%) hue-rotate(190deg) brightness(95%) contrast(95%);
-
+height:100%;
 }
 
 .why-choose-one__left {
